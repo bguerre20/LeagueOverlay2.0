@@ -31,13 +31,13 @@ namespace League_of_Legends_Overlay
         {
             if (start)
             {
-                button1.Text = "START";
+                button1.Text = "PAUSE";
                 start = false;
                 lsc.start();
             }
             else
             {
-                button1.Text = "PAUSE";
+                button1.Text = "START";
                 start = true;
                 lsc.stop();
             }

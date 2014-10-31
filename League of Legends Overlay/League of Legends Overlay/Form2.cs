@@ -12,7 +12,7 @@ namespace League_of_Legends_Overlay
 {
     public partial class Form2 : Form
     {
-        public PictureBox overlayPictureBox;
+        public PictureBox overlayPictureBox = new PictureBox();
 
         public Form2()
         {
