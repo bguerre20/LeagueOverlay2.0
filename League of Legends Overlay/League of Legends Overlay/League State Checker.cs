@@ -147,17 +147,20 @@ namespace League_of_Legends_Overlay
         /// </summary>
         private void stateChecker()
         {
+            bool loadScreenComplete = false;
+
             while(stateCheckerThread.IsAlive)
             {
                 if (leagueWindowOpen())
-                {                    
-                    if (loadScreenOpen())
+                {
+                    if (!loadScreenComplete && loadScreenOpen())
                     {
                         displayLoadScreenOverlay();
                     }
                     else
                     {
                         displayInGameOverlay();
+                        loadScreenComplete = true;
                     }
                 }
                 else
