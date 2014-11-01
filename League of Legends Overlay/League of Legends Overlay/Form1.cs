@@ -40,6 +40,7 @@ namespace League_of_Legends_Overlay
                 button1.Text = "START";
                 start = true;
                 lsc.stop();
+
             }
                 
         }

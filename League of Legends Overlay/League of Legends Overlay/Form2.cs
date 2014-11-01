@@ -21,8 +21,10 @@ namespace League_of_Legends_Overlay
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            overlayPictureBox.Location = new Point(0, 0);
-            overlayPictureBox.Size = this.Size;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Size = this.Size;
+            this.WindowState = FormWindowState.Minimized;
+            
         }
 
     }

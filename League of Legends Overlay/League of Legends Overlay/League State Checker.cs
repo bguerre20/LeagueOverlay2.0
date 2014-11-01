@@ -41,7 +41,7 @@ namespace League_of_Legends_Overlay
         /// </summary>
         public League_State_Checker()
         {
-            stateCheckerThread = new Thread(new ThreadStart(stateChecker));
+            
         }
 
         /// <summary>
@@ -51,7 +51,8 @@ namespace League_of_Legends_Overlay
         {
             overlayForm.Show();
             //overlayForm.Visible = false;
-            //stateCheckerThread.Start();
+            stateCheckerThread = new Thread(new ThreadStart(stateChecker));
+            stateCheckerThread.Start();
         }
 
         /// <summary>
@@ -60,6 +61,7 @@ namespace League_of_Legends_Overlay
         public void stop()
         {
             stateCheckerThread.Abort();
+
         }
 
         /// <summary>
@@ -74,7 +76,7 @@ namespace League_of_Legends_Overlay
             {
                 if ((process.MainWindowTitle).ToString().Equals("League of Legends (TM) Client"))
                 {
-                   GetWindowRect(process.Handle, ref lRect);
+                   GetWindowRect(process.MainWindowHandle, ref lRect);
                    lProcess = process;
                    leagueProcess = process;
                 }
@@ -108,12 +110,16 @@ namespace League_of_Legends_Overlay
         {
             
             overlayForm.Invoke((MethodInvoker)delegate
+            
             {
+                overlayForm.WindowState = FormWindowState.Maximized;
                 overlayForm.Location = new Point(lRect.left,lRect.top);
                 overlayForm.Height = lRect.bottom;
                 overlayForm.Width = lRect.right;
                 overlayForm.Visible = true;
-                overlayForm.overlayPictureBox.Image = League_of_Legends_Overlay.Properties.Resources.load_screen_overlay;
+                overlayForm.pictureBox1.Image = League_of_Legends_Overlay.Properties.Resources.load_screen_overlay;
+                overlayForm.pictureBox1.Size = overlayForm.Size;
+                overlayForm.pictureBox1.Show();
             });
         }
 
@@ -122,11 +128,16 @@ namespace League_of_Legends_Overlay
         {
             overlayForm.Invoke((MethodInvoker)delegate
             {
+                overlayForm.Show();
+                overlayForm.WindowState = FormWindowState.Maximized;
                 overlayForm.Location = new Point(lRect.left, lRect.top);
                 overlayForm.Height = lRect.bottom;
                 overlayForm.Width = lRect.right;
                 overlayForm.Visible = true;
-                overlayForm.overlayPictureBox.Image = League_of_Legends_Overlay.Properties.Resources.diamond_overlay;
+                overlayForm.pictureBox1.Image = League_of_Legends_Overlay.Properties.Resources.diamond_overlay;
+                overlayForm.pictureBox1.Size = overlayForm.Size;
+                overlayForm.pictureBox1.Show();
+               
             });
         }
 
@@ -154,6 +165,7 @@ namespace League_of_Legends_Overlay
                     overlayForm.Invoke((MethodInvoker)delegate
                     {
                         overlayForm.Visible = false;
+                        overlayForm.WindowState = FormWindowState.Minimized;
                     });
                 }
                 Thread.Sleep(1000);
