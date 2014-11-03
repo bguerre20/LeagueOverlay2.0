@@ -18,3 +18,13 @@ C:\Users\Bryan\Documents\GitHub\LeagueOverlay2.0\League of Legends Overlay\Leagu
 C:\Users\Bryan\Documents\GitHub\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League_of_Legends_Overlay.Form2.resources
 C:\Users\Bryan\Documents\GitHub\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League_of_Legends_Overlay.Properties.Resources.resources
 C:\Users\Bryan\Documents\GitHub\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League of Legends Overlay.csproj.GenerateResource.Cache
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\bin\Debug\League of Legends Overlay.exe.config
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League of Legends Overlay.exe
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League of Legends Overlay.pdb
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\bin\Debug\League of Legends Overlay.exe
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\bin\Debug\League of Legends Overlay.pdb
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League of Legends Overlay.csprojResolveAssemblyReference.cache
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League_of_Legends_Overlay.Form1.resources
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League_of_Legends_Overlay.Form2.resources
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League_of_Legends_Overlay.Properties.Resources.resources
+C:\Users\Bryan\Desktop\LeagueOverlay2.0\League of Legends Overlay\League of Legends Overlay\obj\Debug\League of Legends Overlay.csproj.GenerateResource.Cache

@@ -23,7 +23,7 @@ namespace League_of_Legends_Overlay
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         //Start Button

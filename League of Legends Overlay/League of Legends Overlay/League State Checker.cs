@@ -120,6 +120,7 @@ namespace League_of_Legends_Overlay
                 overlayForm.pictureBox1.Image = League_of_Legends_Overlay.Properties.Resources.load_screen_overlay;
                 overlayForm.pictureBox1.Size = overlayForm.Size;
                 overlayForm.pictureBox1.Show();
+                overlayForm.SetFormTransparent(overlayForm.Handle);
             });
         }
 
@@ -137,6 +138,7 @@ namespace League_of_Legends_Overlay
                 overlayForm.pictureBox1.Image = League_of_Legends_Overlay.Properties.Resources.diamond_overlay;
                 overlayForm.pictureBox1.Size = overlayForm.Size;
                 overlayForm.pictureBox1.Show();
+                overlayForm.SetFormTransparent(overlayForm.Handle);
                
             });
         }
@@ -148,7 +150,7 @@ namespace League_of_Legends_Overlay
         private void stateChecker()
         {
             bool loadScreenComplete = false;
-
+            bool overlayComplete = false;
             while(stateCheckerThread.IsAlive)
             {
                 if (leagueWindowOpen())
@@ -157,10 +159,11 @@ namespace League_of_Legends_Overlay
                     {
                         displayLoadScreenOverlay();
                     }
-                    else
+                    else if (!overlayComplete)
                     {
                         displayInGameOverlay();
                         loadScreenComplete = true;
+                        overlayComplete = true;
                     }
                 }
                 else
@@ -169,6 +172,8 @@ namespace League_of_Legends_Overlay
                     {
                         overlayForm.Visible = false;
                         overlayForm.WindowState = FormWindowState.Minimized;
+                        loadScreenComplete = false;
+                        overlayComplete = false;
                     });
                 }
                 Thread.Sleep(1000);

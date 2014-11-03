@@ -48,6 +48,7 @@
             this.BackColor = System.Drawing.Color.DeepPink;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -55,6 +56,7 @@
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.DeepPink;
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.Click += new System.EventHandler(this.Form2_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
